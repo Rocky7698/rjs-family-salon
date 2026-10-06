@@ -1,0 +1,439 @@
+/* =====================
+   GLOBAL STYLES
+   ===================== */
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    padding-top: 70px;
+    /* fixed navbar */
+    overflow-x: hidden;
+}
+
+.section-title {
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* =====================
+   NAVBAR
+   ===================== */
+
+.navbar-brand {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* =====================
+   HERO SECTION
+   ===================== */
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        url('https://images.unsplash.com/photo-1522337660859-02fbefca4702');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 160px 0;
+    text-align: center;
+}
+
+/* =====================
+   BUTTONS
+   ===================== */
+
+.btn-salon {
+    background: linear-gradient(135deg, #c59d5f, #b0894f);
+    color: white;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-weight: 600;
+    border: none;
+}
+
+.btn-salon:hover {
+    background: linear-gradient(135deg, #b0894f, #a0783f);
+    color: #fff;
+}
+
+/* =====================
+   SERVICE CARDS
+   ===================== */
+
+.card {
+    border-radius: 14px;
+}
+
+.card-body {
+    padding: 25px 20px;
+}
+
+/* =====================
+   FOOTER
+   ===================== */
+
+footer {
+    font-size: 14px;
+}
+
+/* =====================
+   FLOATING WHATSAPP & CALL BUTTONS
+   ===================== */
+
+.floating-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.floating-buttons a {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    line-height: 52px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+    text-decoration: none;
+}
+
+/* WhatsApp */
+.whatsapp-btn {
+    background-color: #25D366;
+}
+
+/* Call */
+.call-btn {
+    background-color: #111;
+}
+
+/* =====================
+   MOBILE RESPONSIVE FIXES
+   ===================== */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 100px 15px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .btn-salon {
+        padding: 10px 22px;
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    footer {
+        font-size: 13px;
+    }
+
+    /* Floating buttons slightly smaller on mobile */
+    .floating-buttons a {
+        width: 48px;
+        height: 48px;
+        font-size: 22px;
+        line-height: 48px;
+    }
+}
+
+.hero-slide {
+    height: 85vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-slide .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-slide h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.hero-slide p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero-slide {
+        height: 65vh;
+    }
+
+    .hero-slide h1 {
+        font-size: 26px;
+    }
+}
+
+/* =====================
+   NAVBAR LOGO
+   ===================== */
+
+.navbar-logo {
+    height: 40px;
+    /* desktop height */
+    width: auto;
+    /* keep ratio */
+    object-fit: contain;
+    /* no stretch */
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+    .navbar-logo {
+        height: 32px;
+    }
+}
+
+.navbar-logo {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+}
+
+/* =====================
+   BOOKING FORM LOGO (FIXED)
+   ===================== */
+
+.booking-logo {
+    max-width: 140px;
+    /* key fix */
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Mobile specific fix */
+@media (max-width: 768px) {
+    .booking-logo {
+        max-width: 110px;
+    }
+}
+
+.card-body {
+    padding: 20px 18px;
+}
+
+/* =====================
+   BOOKING LOGO – HARD FIX
+   ===================== */
+
+.booking-logo-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.booking-logo {
+    max-width: 120px !important;
+    /* FORCE */
+    width: 100% !important;
+    height: auto !important;
+    max-height: 120px !important;
+    object-fit: contain !important;
+    display: block !important;
+}
+
+/* Extra small mobile */
+@media (max-width: 480px) {
+    .booking-logo {
+        max-width: 95px !important;
+        max-height: 95px !important;
+    }
+}
+
+/* =====================
+   SERVICES CARD HOVER
+   ===================== */
+
+#services .card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#services .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* Optional: icon thoda animate ho */
+#services .card:hover .fs-1 {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* =====================
+   SLIDER ARROWS STYLE
+   ===================== */
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 55px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    background-size: 60% 60%;
+    padding: 18px;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 45px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        padding: 14px;
+    }
+}
+
+/* =====================
+   SOCIAL MEDIA ICONS
+   ===================== */
+
+.social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    margin: 0 6px;
+    border-radius: 50%;
+    background: #222;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: #c59d5f;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+    padding: 12px 14px;
+    font-size: 14px;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+
+    table thead {
+        display: none;
+    }
+
+    table tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        background: #fff;
+    }
+
+    table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 6px 0;
+        border: none;
+        font-size: 14px;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #555;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .table th,
+    .table td {
+        font-size: 13px;
+        padding: 8px;
+        white-space: nowrap;
+    }
+
+    .btn-sm {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .btn-sm {
+        min-width: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        font-size: 12px;
+        padding-bottom: 60px;
+    }
+}
+
+.stat-card {
+    min-height: 90px;
+}
+
+@media (max-width: 768px) {
+    .stat-card {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .table th,
+    .table td {
+        font-size: 13px;
+        padding: 6px;
+        white-space: nowrap;
+    }
+}
